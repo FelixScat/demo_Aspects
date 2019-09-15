@@ -1,0 +1,23 @@
+PODS:
+  - Aspects (1.4.1)
+  - demo_Aspects (0.1.0)
+
+DEPENDENCIES:
+  - Aspects
+  - demo_Aspects (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Aspects
+
+EXTERNAL SOURCES:
+  demo_Aspects:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  demo_Aspects: 0b85f0d1281dddb08cd06617e324cfe24813689d
+
+PODFILE CHECKSUM: b7c964fea54e58cb244a034c533babb4de3cd258
+
+COCOAPODS: 1.7.5
