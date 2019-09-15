@@ -13,18 +13,13 @@
 
 + (void)load {
     
-    void (^block)() = ^() {
-        NSLog(@"%@ init", self);
-    };
+//    void (^block)() = ^() {
+//        NSLog(@"%@ init", self);
+//    };
     
-    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
-//        NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
-        NSLog(@"heheda");
+    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
+        NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
     } error:NULL];
-}
-
-- (void)_didInit {
-    NSLog(@"%@ %@", self, NSStringFromSelector(_cmd));
 }
 
 @end
